@@ -3,19 +3,24 @@ import cors from 'cors'; // Import cors
 import bodyParser from 'body-parser'; // Import body-parser
 import puppeteer from 'puppeteer'; // Import puppeteer for web scraping
 
+
 const app = express(); // Initialize app here
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
+
 
 app.get ('/', (req, res) => {
   res.send('Hello World!');
-} ); 
+} );
+
 
 app.use(cors());
 app.use(bodyParser.json());
 
+
 // Temporary in-memory storage
 const scanData = {};
 let progress = 0;
+
 
 // Helper Functions
 const getIpAddress = async () => {
@@ -28,19 +33,23 @@ const getIpAddress = async () => {
 };
 
 
+
+
 const getTrackersOrigin = async (url) => {
   try {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: 'domcontentloaded' });
 
+
     // Extract all the script sources and iframe sources
     const trackerOrigins = await page.evaluate(() => {
       const scriptSources = Array.from(document.querySelectorAll('script[src]')).map(script => script.src);
       const iframeSources = Array.from(document.querySelectorAll('iframe[src]')).map(iframe => iframe.src);
-      
+     
       return [...scriptSources, ...iframeSources]; // Combine both sources
     });
+
 
     await browser.close();
     return trackerOrigins.length > 0 ? trackerOrigins : ['No trackers found']; // Return found trackers, or fallback message
@@ -59,15 +68,18 @@ const calculateRiskRate = (trackers) => {
   }
 };
 
+
 // Start scan
 app.post('/api/scan/start', async (req, res) => {
   const { url } = req.body;
   const scanId = Date.now().toString();
 
+
   const cookies = Math.floor(Math.random() * 10);
   const trackers = Math.floor(Math.random() * 10);
   const total = cookies + trackers;
   const density = total > 0 ? ((trackers / total) * 100).toFixed(2) : 0;
+
 
   // Fetch the actual IP address
   let ipAddress = 'Unknown';
@@ -77,6 +89,7 @@ app.post('/api/scan/start', async (req, res) => {
     console.error('Error fetching IP address:', error);
   }
 
+
   // Fetch the actual trackers' origin
   let trackerOrigin = 'Unknown';
   try {
@@ -85,8 +98,10 @@ app.post('/api/scan/start', async (req, res) => {
     console.error('Error fetching tracker origin:', error);
   }
 
+
   // Calculate the risk rate dynamically
   const riskRate = calculateRiskRate(trackers);
+
 
   // Store the scan data
   scanData[scanId] = {
@@ -100,7 +115,9 @@ app.post('/api/scan/start', async (req, res) => {
     riskrate: riskRate, // Risk rate based on trackers
   };
 
+
   progress = 0;
+
 
   // Simulate scan process
   const interval = setInterval(() => {
@@ -110,14 +127,17 @@ app.post('/api/scan/start', async (req, res) => {
     }
   }, 1000);
 
+
   res.json({ scanId });
 });
+
 
 // Get scan progress
 app.get('/api/scan/progress/:scanId', (req, res) => {
   const scanId = req.params.scanId;
   res.json({ progress, status: progress >= 100 ? 'done' : 'scanning' });
 });
+
 
 // Get scan summary
 app.get('/api/scan/summary/:scanId', (req, res) => {
@@ -128,6 +148,7 @@ app.get('/api/scan/summary/:scanId', (req, res) => {
     res.status(404).json({ error: 'Scan not found' });
   }
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
