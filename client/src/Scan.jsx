@@ -15,7 +15,7 @@ function Scan() {
     if (url.trim()) {
       try {
         // 🔄 Send URL to backend to start scanning
-        const response = await axios.post('http://localhost:3001/api/scan/start', { url });
+        const response = await axios.post('https://trackpeek.onrender.com/api/scan/start', { url });
         const scanId = response.data.scanId;
 
         // ✅ Redirect to Scan Processing page with scanId as param

@@ -11,7 +11,7 @@ function ScanProcessing() {
   useEffect(() => {
     const interval = setInterval(async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/api/scan/progress/${scanId}`);
+        const res = await axios.get(`https://trackpeek.onrender.com/api/scan/progress/${scanId}`);
         setProgress(res.data.progress);
 
         if (res.data.progress >= 100 || res.data.status === 'done') {

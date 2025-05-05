@@ -61,7 +61,7 @@ function ScanSummary() {
   useEffect(() => {
     const fetchScanData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/api/scan/summary/${scanId}`);
+        const response = await axios.get(`https://trackpeek.onrender.com/api/scan/summary/${scanId}`);
         setScanData(response.data);
       } catch (error) {
         console.error('Error fetching scan data:', error);
