@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap');
+.container{
+    padding-left: 50px;
+   
+  }
+  .card {
+    padding: 50px;
+    position: relative;
+    left: 500px;
+    top: 160px;
+    text-align: center;
+    width: 350px;
+    height: 420px;
+    border: 1px solid rgba(144, 144, 144, 0.466);
+    background: linear-gradient(
+    170.88deg,
+    rgba(255, 255, 255, 0.16) 61.47%,
+    rgba(61, 56, 56, 0.16) 85%,
+    rgba(247, 247, 247, 0.16) 100%
+  );
+  
+    border-radius: 37px;
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+    filter:drop-shadow(0,4,4,0 000000 25%) ;
+    
+  }
+  
+  .card .card-image {
+    max-width: 10rem;
+    border-radius: 50px;
+    padding-bottom: 1px;
+  }
+  
+  .card .heading {
+    color: white;
+    padding-bottom: 5px;
+  }
+  
+  .card .pragraph {
+    text-align: center;
+    font-size: 18px;
+    color: #e0e0e0;
+    padding-bottom: 20px;
+  
+  }
+  .logo-box {
+    text-align: center;
+  }
+  .card-logo {
+    max-width: 8rem;
+    border-radius: 10px;
+  }
+  
+  .card-title {
+    color: hsl(0, 0%, 20%);
+    margin-top: 5px;
+    margin-bottom: 10px; /* add this to control spacing below title */
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  }
+  input{
+
+width: 403px;
+height: 18px;
+/* left: 526px;
+top: 689px; */
+
+background: linear-gradient(90deg, #3e71b2 29.77%, #657b98 84.89%);
+border: none;
+outline: none;
+
+border-radius: 12px;
+padding-bottom: 20px;
+margin-bottom: 35px;
+
+}
+input::placeholder{
+    text-align: center;
+    color: rgba(176, 176, 176, 0.747);
+    font-size: 16px;
+    font-family: "Nova Flat", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+  
+  .btton {
+  width: 150px;
+  height: 45px;
+border: none;
+outline: none;
+  background: linear-gradient(90deg, #4B8ADE 29.77%, #CDD6E2 84.89%);
+  border-radius: 80px;
+  font-size:20px ;
+  font-family: "Nova Square", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+  
+  .btton:hover {
+    background: linear-gradient(90deg, #366fc9 29.77%, #b7c2d1 84.89%);
+    box-shadow: 0px 4px 15px rgba(75, 138, 222, 0.5);
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+  }
+  

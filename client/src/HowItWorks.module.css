@@ -1,0 +1,31 @@
+.card {
+    padding: 50px;
+    position: relative;
+    left: 80px;
+    top: 160px;
+    text-align: center;
+    width: 1271px;
+    height: 430px;
+    border: 1px solid rgba(144, 144, 144, 0.466);
+    background: linear-gradient(
+    170.88deg,
+    rgba(255, 255, 255, 0.16) 61.47%,
+    rgba(61, 56, 56, 0.16) 85%,
+    rgba(247, 247, 247, 0.16) 100%
+  );
+  
+    border-radius: 37px;
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+    filter:drop-shadow(0,4,4,0 000000 25%) ;
+    
+  }
+h1{
+    color: white;
+    text-align: left;
+    padding-bottom: 5px;
+}
+ol{
+    color: white;
+    text-align: left;
+    font-size: 30px;
+}

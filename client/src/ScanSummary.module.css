@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+.container {
+  padding-left: 50px;
+  overflow-y: auto; /* Make the container scrollable */
+  height: 100vh; /* Ensure it takes full height of the screen */
+}
+  .card {
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    width: 1280px;
+    left:70px;
+    top: 180px;
+    height: auto; /* This will allow the card to adjust its height based on content */
+    border: 1px solid rgba(144, 144, 144, 0.466);
+    background: linear-gradient(
+      170.88deg,
+      rgba(255, 255, 255, 0.16) 61.47%,
+      rgba(61, 56, 56, 0.16) 85%,
+      rgba(247, 247, 247, 0.16) 100%
+    );
+    border-radius: 37px;
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(0, 4, 4, 0 000000 25%);
+    text-wrap: wrap;
+  }
+  .contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+}
+
+  .card .card-image {
+    max-width: 10rem;
+    border-radius: 50px;
+    padding-bottom: 1px;
+  }
+  
+  .card .heading {
+    color: white;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+
+  .logo-box {
+    text-align: center;
+  }
+  .card-logo {
+    max-width: 8rem;
+    border-radius: 10px;
+  }
+  
+  .card-title {
+    color: hsl(0, 0%, 20%);
+    margin-top: 5px;
+    margin-bottom: 10px; /* add this to control spacing below title */
+  text-align: center;
+  }
+  h1{
+    font-size: 35px;
+  }
+  h2{
+    padding-left: 1em;
+  }
+  .pbtton {
+    width: 200px;
+    height: 45px;
+  border: none;
+  outline: none;
+    background: linear-gradient(90deg, #4B8ADE 29.77%, #CDD6E2 84.89%);
+    border-radius: 80px;
+    font-size:18px ;
+    font-family: "Nova Square", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    margin-top: 20px;
+    }
+    
+    .pbtton:hover {
+      background: linear-gradient(90deg, #366fc9 29.77%, #b7c2d1 84.89%);
+      box-shadow: 0px 4px 15px rgba(75, 138, 222, 0.5);
+      cursor: pointer;
+      transform: scale(1.03);
+      transition: all 0.3s ease;
+    }
+    .footer
+    {
+        padding-top: 200px;
+    }
+    .footp{
+        text-align: center;
+    }
+    .contentWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 10px;
+      flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+    }
+    
+    /* Details section */
+    .details {
+      width: 55%;
+      text-align: left;
+      color: white;
+      padding-left: 50px;
+    }
+    
+    /* Chart section */
+    .chart {
+      width: 40%;
+      text-align: center;
+      min-width: 250px; /* Prevent chart from getting too small */
+      height: auto;
+      margin: 0 auto;
+    }
+    
+    /* Footer section */
+    .footer {
+      padding-top: 170px;
+    }
+    
+    .footp {
+      text-align: center;
+    }
+    
+    /* Pie chart sizing */
+    .chart canvas {
+      max-width: 250px;  /* Adjust the size of the chart */
+      max-height: 250px; /* Limit the height */
+      width: 100% !important; /* Make it responsive */
+      height: 100% !important;
+    }
