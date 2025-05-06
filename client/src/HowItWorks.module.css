@@ -1,6 +1,6 @@
 .card {
     padding: 50px;
-    position: relative;
+    position: absolute;
     left: 80px;
     top: 160px;
     text-align: center;
@@ -28,4 +28,108 @@ ol{
     color: white;
     text-align: left;
     font-size: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .navbar {
+    width: 90%;
+    left: 5%;
+    top: 30px;
+  }
+
+  .card {
+    width: 70%;
+    height: 5auto;
+    margin-top: 100px;
+  }
+}
+
+/* Tablets (<= 768px) */
+@media screen and (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar {
+    font-size: medium;
+    padding: 8px 15px;
+    border-radius: 25px;
+    width: 60%; /* Full width */
+    height:200px;
+    left: 160px;
+    right: 0;
+    top: 100px; /* Adjust the navbar's position slightly */
+    box-sizing: border-box; /* Ensure proper padding calculation */
+  }
+
+  /* Navbar links */
+  .nav-links {
+    gap: 0.8rem;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center links */
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-item {
+    font-size: 14px; /* Reduce font size on small screens */
+  }
+
+  /* Card adjustments */
+  .card {
+    padding: 50px 45px;
+    margin-top: 180px; /* Adjusted margin-top to move the card lower */
+    width: 50%; /* Fit within screen */
+    max-width: 330px; /* Ensure card doesn’t stretch too wide */
+    height: auto;
+    margin-left: auto; /* Center card horizontally */
+    margin-right: auto; /* Center card horizontally */
+    left: 180px;
+  }
+
+  /* Button adjustments */
+  button, .card-button {
+    width: 100%; /* Full width for buttons */
+    font-size: 16px;
+    padding: 12px 0; /* Adjust padding for better fit */
+    border-radius: 50px; /* Keep the button styling consistent */
+  }
+
+  /* Additional styling for mobile responsiveness */
+  body, html {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    padding: 0;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px; /* Make sure there’s no extra horizontal padding */
+  }
+}
+
+/* Mobile phones (<= 480px) */
+@media screen and (max-width: 480px) {
+  /* Navbar adjustments */
+  
+  /* Card adjustments */
+  .card {
+    padding: 20px 15px;
+    margin-top: 80px; /* Reduce margin-top to avoid overlap */
+    width: 70%; /* Fit within screen */
+    max-width: 330px; /* Ensure card doesn’t stretch too wide */
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    left: 45px; /* Center card */
+  }
+
+  /* Button adjustments */
+  
+
+  /* Additional styling for mobile responsiveness */
+  body, html {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    padding: 0;
+  }
+
+  /* .container {
+    padding-left: 15px;
+    padding-right: 15px; 
+  } */
 }

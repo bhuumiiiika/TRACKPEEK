@@ -7,10 +7,11 @@ body,html{
   margin:0;
   padding: 0;
   height: 100vh;
-  overflow: hidden;
   background-image: url(./assets/bg.webp);
   background-size: cover;
   box-sizing: border-box;
+  overflow-x:hidden;
+  overflow-y: auto;
 }
 .container{
   padding-left: 50px;
@@ -18,24 +19,21 @@ body,html{
 }
 .card {
   padding: 50px;
-  position: relative;
-  left: 500px;
-  top: 160px;
+  margin: 110px auto 0 auto; /* vertically spaced, horizontally centered */
   text-align: center;
-  width: 350px;
-  height: 420px;
+  width: 90%;
+  max-width: 350px;
+  height: auto;
   border: 1px solid rgba(144, 144, 144, 0.466);
   background: linear-gradient(
-  170.88deg,
-  rgba(255, 255, 255, 0.16) 61.47%,
-  rgba(61, 56, 56, 0.16) 85%,
-  rgba(247, 247, 247, 0.16) 100%
-);
-
+    170.88deg,
+    rgba(255, 255, 255, 0.16) 61.47%,
+    rgba(61, 56, 56, 0.16) 85%,
+    rgba(247, 247, 247, 0.16) 100%
+  );
   border-radius: 37px;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
-  filter:drop-shadow(0,4,4,0 000000 25%) ;
-  
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .card .card-image {
@@ -101,7 +99,7 @@ font-style: normal;
 }
 
 .navbar{
-  position: absolute;
+  position: relative;
 width: 717px;
 height: 70px;
 left: 415px;
@@ -150,4 +148,137 @@ display: flex;
 
 .nav-item:hover::after {
   width: 100%;
+}
+/* Large tablets and small laptops (<= 1024px) */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    width: 90%;
+    left: 5%;
+    top: 30px;
+  }
+
+  .card {
+    width: 80%;
+    height: 50%;
+    margin-top: 100px;
+  }
+}
+
+/* Tablets (<= 768px) */
+@media screen and (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar {
+    font-size: medium;
+    padding: 8px 15px;
+    border-radius: 25px;
+    width: 60%; /* Full width */
+    height:200px;
+    left: 160px;
+    right: 0;
+    top: 100px; /* Adjust the navbar's position slightly */
+    box-sizing: border-box; /* Ensure proper padding calculation */
+  }
+
+  /* Navbar links */
+  .nav-links {
+    gap: 0.8rem;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center links */
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-item {
+    font-size: 14px; /* Reduce font size on small screens */
+  }
+
+  /* Card adjustments */
+  .card {
+    padding: 50px 45px;
+    margin-top: 180px; /* Adjusted margin-top to move the card lower */
+    width: 50%; /* Fit within screen */
+    max-width: 330px; /* Ensure card doesn’t stretch too wide */
+    height: auto;
+    margin-left: auto; /* Center card horizontally */
+    margin-right: auto; /* Center card horizontally */
+  }
+
+  /* Button adjustments */
+  button, .card-button {
+    width: 100%; /* Full width for buttons */
+    font-size: 16px;
+    padding: 12px 0; /* Adjust padding for better fit */
+    border-radius: 50px; /* Keep the button styling consistent */
+  }
+
+  /* Additional styling for mobile responsiveness */
+  body, html {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    padding: 0;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px; /* Make sure there’s no extra horizontal padding */
+  }
+}
+
+/* Mobile phones (<= 480px) */
+@media screen and (max-width: 480px) {
+  /* Navbar adjustments */
+  .navbar {
+    font-size: medium;
+    padding: 8px 15px;
+    border-radius: 25px;
+    width: 80%; /* Full width */
+    height: 180px;
+    left: 40px;
+    right: 0;
+    top: 40px; /* Adjust the navbar's position slightly */
+    box-sizing: border-box; /* Ensure proper padding calculation */
+  }
+
+  /* Navbar links */
+  .nav-links {
+    gap: 0.8rem;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center links */
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-item {
+    font-size: 14px; /* Reduce font size on small screens */
+  }
+
+  /* Card adjustments */
+  .card {
+    padding: 50px 45px;
+    margin-top: 80px; /* Reduce margin-top to avoid overlap */
+    width: 70%; /* Fit within screen */
+    max-width: 330px; /* Ensure card doesn’t stretch too wide */
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    left: 40px; /* Center card */
+  }
+
+  /* Button adjustments */
+  button, .card-button {
+    width: 100%; /* Full width for buttons */
+    font-size: 16px;
+    padding: 12px 0; /* Adjust padding for better fit */
+    border-radius: 50px; /* Keep the button styling consistent */
+  }
+
+  /* Additional styling for mobile responsiveness */
+  body, html {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    padding: 0;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px; /* Make sure there’s no extra horizontal padding */
+  }
 }
