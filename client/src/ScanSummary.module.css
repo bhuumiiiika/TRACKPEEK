@@ -115,12 +115,35 @@
       text-align: center;
       min-width: 250px; /* Prevent chart from getting too small */
       height: auto;
-      margin: 0 auto;
+      margin: -40px auto 0 auto; /* Moves chart upward by 20px */
+    }
+    .webviewContainer {
+      margin-top: 2rem;
+      /* background-color: #111827; */
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin: 430px 250px 0 auto; 
+      margin-left: 720px;
+      /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); */
+      position: relative;
     }
     
-    /* Footer section */
+    .webviewContainer h2 {
+      color: #ffffff;
+      margin-bottom: 1rem;
+      font-family: 'Nova Square', sans-serif;
+    }
+    
+    .webview {
+      width: 400px;
+      height: 150px;
+      border-radius:8px;
+    }
+   
     .footer {
-      padding-top: 170px;
+      padding-left: 280px;
+      padding-top: 30px;
+      position:absolute;
     }
     
     .footp {
@@ -129,8 +152,8 @@
     
     /* Pie chart sizing */
     .chart canvas {
-      max-width: 250px;  /* Adjust the size of the chart */
-      max-height: 250px; /* Limit the height */
+      max-width: 180px;  /* Adjust the size of the chart */
+      max-height: 180px; /* Limit the height */
       width: 100% !important; /* Make it responsive */
       height: 100% !important;
     }
@@ -243,9 +266,9 @@
       }
       .footer
     {
-        padding-top: 900px;
+        padding-top: 450px;
     }
-    
+
       .container {
         padding-left: 15px;
         padding-right: 15px; 

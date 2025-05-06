@@ -19,7 +19,7 @@ body,html{
 }
 .card {
   padding: 50px;
-  margin: 110px auto 0 auto; /* vertically spaced, horizontally centered */
+  margin: 150px auto 0 auto; /* vertically spaced, horizontally centered */
   text-align: center;
   width: 90%;
   max-width: 350px;
@@ -99,7 +99,7 @@ font-style: normal;
 }
 
 .navbar{
-  position: relative;
+  position: absolute;
 width: 717px;
 height: 70px;
 left: 415px;

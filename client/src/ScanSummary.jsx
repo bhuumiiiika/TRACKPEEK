@@ -40,7 +40,7 @@ function ScanSummary() {
           boxHeight: 20,
           padding: 15,
           font: {
-            size: 16,
+            size: 12,
             family: 'Nova Square',
             weight: 'bold',
           },
@@ -99,7 +99,15 @@ function ScanSummary() {
           )}
         </div>
       </div>
-
+      <div className={styles.webviewContainer}>
+  <iframe
+    src="https://marvelous-unicorn-d6e2b9.netlify.app/"
+    title="Website Preview"
+    className={styles.webview}
+    frameBorder="0"
+    allowFullScreen
+  ></iframe>
+</div>
       <footer className={styles.footer}>
         <p className={styles.footp}>
           Built with passion, precision, and a commitment to your security. Made with ❤️ by CODE CREATURES.
