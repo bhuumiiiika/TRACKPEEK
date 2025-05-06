@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+🕵‍♀ Trackpeek — Web Surveillance Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Trackpeek is a privacy-focused tool that scans websites to uncover cookies, trackers, and third-party domains collecting user data — and transforms that data into *interactive visual reports*.
 
-## Available Scripts
+🚨 Problem
 
-In the project directory, you can run:
+In the modern web, users are tracked without their knowledge — through cookies, scripts, and third-party services. This silent surveillance compromises privacy, fuels profiling, and powers aggressive ads.
 
-### `npm start`
+Most privacy tools either block trackers without explanation or overwhelm users with technical data. Trackpeek takes a different route — it *visualizes what's happening, making web surveillance clear, understandable, and educational.
+🌐 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- *🔍 Cookie & Tracker Breakdown*  
+  Categorized view of all cookies and trackers (e.g., analytics, ads, social).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- *🌍 Geo-Map of Tracker Origins*  
+  Visual map of where your data is sent globally via third-party trackers.
 
-### `npm test`
+- *🔐 Privacy Score*  
+  Simple grading system based on tracking behavior, HTTPS usage, and data sharing.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- *🧩 Chrome Extension (optional)*  
+  Real-time tracker insights while browsing.
 
-### `npm run build`
+- *📊 Interactive Visualizations*  
+  Built using D3.js or Chart.js for intuitive analysis.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+✨ Bonus/Nice-to-Have Features (In Progress or Future Plans)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Tracker blocking and controls from UI  
+- Real-time alerts on tracker-heavy websites  
+- User profiles with historical tracking data  
+- Integration with privacy tools (AdBlock, Ghostery, etc.)  
+- Developer API for embedding Trackpeek in other apps
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ ⚙ Tech Stack
 
-### `npm run eject`
+| Component                | Technology                           |
+|--------------------------|--------------------------------------|
+| Frontend                 | React, D3.js / Chart.js              |
+| Backend                  | Node.js, Puppeteer                   |
+| Visualization (Geo-map)  | Leaflet.js, OpenStreetMap            |
+| Optional Auth            | Firebase                             |
+| Optional Realtime        | Socket.IO                            |
+| Tracker APIs             | Webbkoll                             |
+| Deployment               | Vercel                               |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ 📦 How It Works (High-Level)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Headless browser simulates user visit using Puppeteer  
+2. Logs cookies, network requests, and third-party domains  
+3. Classifies data by type, purpose, and origin  
+4. Visualizes results with graphs and maps  
+5. Computes privacy score based on tracker severity, HTTPS usage, etc.
+🎓 Who It's For
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- *Privacy-conscious individuals*  
+- *Educators and Students* studying internet safety  
+- *Journalists and Researchers* auditing online surveillance  
+- *Anyone curious about who’s watching online*
+ 📈 Project Goals
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Trackpeek aims to:
 
-## Learn More
+- Make invisible surveillance *visible and understandable*
+- Equip users with *knowledge and tools* to assess digital risks
+- Promote *transparency* in the data economy
+ 🛡 License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+MIT License © 2025
+🤝 Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions are welcome! We’re looking for:
+- Designers for better UX
+- Developers for feature expansions
+- Privacy advocates for outreach
+ ❤ Built With Love by
 
-### Code Splitting
+<CODE CREATURES>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
