@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: client_app
+    ports:
+      - "80:80"
+    restart: always
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: server_app
+    expose:
+      - "5000"
+  
+
